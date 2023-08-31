@@ -10,7 +10,10 @@ newIssueWelcomeComment: >
 
 # Comment to be posted to on PRs from first time contributors in your repository
 newPRWelcomeComment: >
-  Thanks for opening this pull request! Please check out our contributing guidelines.
+  Thanks for opening this pull request! Please check out our contributing guidelines:
+  - CONTRIBUTING.md
+  - CODE_STYLE.md
+  - [CODE_OF_CONDUCT.md](https://github.com/tipi-oss-testing/tipi-oss-test/blob/main/CODE_OF_CONDUCT.md)
 
 # Configuration for first-pr-merge - https://github.com/behaviorbot/first-pr-merge
 
