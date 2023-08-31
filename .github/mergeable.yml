@@ -2,18 +2,18 @@ version: 2
 mergeable:
   - when: "pull_request.*, pull_request_review.*"
     name: "check reasoning given"
-    filter:
+    #filter:
     validate:
       - do: title
         must_include:
           regex: 'doc|feat|fix|chore'
-          regex_flag: 'none' # Optional. Specify the flag for Regex. default is 'i', to disable default use 'none'
-          message: 'Custom message...'
+          regex_flag: 'i' # case insensitive
+          message: 'Specify the reason for this merge'
         must_exclude:
           regex: 'DO NOT MERGE|WIP'
           regex_flag: 'none' # Optional. Specify the flag for Regex. default is 'i', to disable default use 'none'
-          message: 'Custom message...'
+          message: 'Marked as work in progress'
       - do: description
         no_empty:
           enabled: true
-          message: Description matter and should not be empty. Provide detail with **what** was changed, **why** it was changed, and **how** it was changed.
+          message: "Description matter and must not be empty. Provide detail with **what** was changed, **why** it was changed, and **how** it was changed."
