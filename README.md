@@ -5,3 +5,6 @@ The Open Source Code of the tipi.build client
 
 * This repo will and must never contain useful code
 * Testing Integrations and Organisational Processes
+
+# Force users to sign the waver
+
