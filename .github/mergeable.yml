@@ -3,10 +3,12 @@ mergeable:
   - when: "pull_request.*, pull_request_review.*"
     name: "check if employee or signed copyright waiver"
     validate:
-      - do: author
-        and:
-          - team: '@tipi-oss-testing/employees'
-          - team: '@tipi-oss-testing/contributor-signed-copyright-waiver'
+      - do: or
+        validate:
+          - do: author
+            team: '@tipi-oss-testing/employees'
+          - do: author
+            team: '@tipi-oss-testing/contributor-signed-copyright-waiver'
   - when: "pull_request.*, pull_request_review.*"
     name: "check reasoning given"
     #filter:
